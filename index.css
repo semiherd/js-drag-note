@@ -1,0 +1,68 @@
+:root{
+    --note-text-color: #636060;
+    --note-bg-color: #dbe3db;
+    --note-header-bg: #5bb4e3;
+    --close-color:#f34848; 
+    --close-bg: #a6ecd8; 
+}
+body{
+    background-color: #dcdcdd;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+main{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+.side-bar{
+    width: max-content;
+    padding: .5%;
+    margin: 1%;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    background-color: #eee;
+}
+.side-bar button{
+    width: min(max-content,3vw);
+    height: min(max-content,5vh);
+    padding: 1%;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;   
+    text-align: center;
+}
+
+#container textarea{
+    all: unset;
+    resize:both;
+    color: var(--note-text-color);
+}
+#container .note{
+    background-color: var(--note-bg-color);
+    width: max-content;
+    border-top: 2vw solid var(--note-header-bg);
+    border-radius: 50px 10px 10px 10px;
+    padding: 10px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+#container .note span{
+    position: absolute; 
+    bottom: 100%;
+    left: 0; 
+    font-size: 1.2rem;
+    text-align: center;
+    border-radius: 50px;
+    background-color: var(--close-bg);
+    cursor: pointer;
+    color: var(--close-color);
+    width: 2vw;
+    height: 2vw;
+    font-weight: 900;
+}
